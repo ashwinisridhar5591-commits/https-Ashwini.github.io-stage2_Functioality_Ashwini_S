@@ -2,10 +2,10 @@
 
 Place original Jain University photos in this folder. By default the site expects these filenames (used in index and initial gallery):
 
-- jain1.jpg  — Central lawn / hero image
-- jain2.jpg  — Academic block
-- jain3.jpg  — Library / study spaces
-- jain4.jpg  — Student common area
+- Stage2_Functionality_Ashwini.S.zip/files/images/.jpg  — Central lawn / hero image
+- Stage2_Functionality_Ashwini.S.zip/files/images/.jpg  — Academic block
+- Stage2_Functionality_Ashwini.S.zip/files/images/.jpg  — Library / study spaces
+- Stage2_Functionality_Ashwini.S.zip/files/images/.jpg  — Student common area
 
 Guidelines:
 - Use original photos you took on Jain University campus (do NOT use copyrighted third-party images).
