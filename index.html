@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jain University — Campus Showcase (Stage 2)</title>
+  <meta name="description" content="Jain University Campus Showcase — interactive project for Stage 2 submission" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a class="brand" href="#">Jain University</a>
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="admin.html" class="muted">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Toggle theme">🌙</button>
+        <button id="menu-toggle" class="icon-btn menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero" tabindex="-1">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Jain University Campus Showcase</h1>
+          <p class="lead">A polished, responsive, and interactive project built for Stage 2 submission. Replace images with original campus photos before submission.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#gallery">Explore Gallery</a>
+            <a class="btn btn-ghost" href="#features">See Features</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="images/jain1.jpg" alt="Jain University central lawn (replace with original)" />
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="container section">
+      <h2 class="section-title">Campus Gallery</h2>
+      <p class="muted">Click any image for a fullscreen view — use arrow keys to navigate.</p>
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="features" class="container section">
+      <h2 class="section-title">Interactive Features</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3>Accessible Navigation</h3>
+          <p>Responsive header with keyboard-friendly links and mobile menu.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Gallery Modal & Slider</h3>
+          <p>Fullscreen modal with keyboard controls, captions and thumbnails.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Contact Form</h3>
+          <p>Client-side validation with toast feedback and message persistence for admin review.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Theme Toggle</h3>
+          <p>Light / dark theme persisted across visits using localStorage.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Smooth Animations</h3>
+          <p>Scroll reveal and subtle motion to improve UX without distraction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2 class="section-title">Contact / Feedback</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Write your message"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <button type="reset" class="btn btn-ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Jain University — Campus Showcase</p>
+      <p class="muted">Stage 2 submission — include original Jain University photos in images/ before final submission.</p>
+    </div>
+  </footer>
+
+  <!-- Gallery Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Image gallery">
+    <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-body">
+      <button id="modal-prev" class="modal-arrow" aria-label="Previous image">◀</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="">
+        <p id="modal-caption" class="modal-caption"></p>
+        <div id="modal-thumbs" class="modal-thumbs" aria-hidden="false"></div>
+      </div>
+      <button id="modal-next" class="modal-arrow" aria-label="Next image">▶</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

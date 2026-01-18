@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Jain University Showcase</title>
+  <meta name="description" content="Admin dashboard (demo) for Jain University Showcase" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" style="max-width:980px;padding-top:1.5rem">
+    <a href="index.html" class="muted">← Back to site</a>
+    <h1>Admin Dashboard (Demo)</h1>
+    <p class="muted">This admin is a client-side demo only (localStorage). For production, use a server and real auth.</p>
+
+    <section id="admin-login" style="margin-top:1rem">
+      <h2>Login</h2>
+      <form id="login-form" style="max-width:420px">
+        <div class="form-row">
+          <label for="admin-email">Email</label>
+          <input id="admin-email" type="email" required placeholder="admin@jain.edu" />
+        </div>
+        <div class="form-row">
+          <label for="admin-pass">Password</label>
+          <input id="admin-pass" type="password" required placeholder="Password" />
+        </div>
+        <div style="display:flex;gap:0.6rem;margin-top:0.5rem">
+          <button class="btn" type="submit">Login</button>
+          <button id="show-creds" type="button" class="btn btn-ghost">Show demo creds</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="dashboard" style="display:none;margin-top:1.25rem">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2>Dashboard</h2>
+        <div>
+          <button id="logout" class="btn btn-ghost">Logout</button>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.5rem;margin-top:0.8rem;flex-wrap:wrap">
+        <button id="tab-messages" class="btn">Messages</button>
+        <button id="tab-gallery" class="btn">Gallery</button>
+      </div>
+
+      <div id="panel-messages" style="margin-top:0.8rem">
+        <h3>Contact Messages</h3>
+        <div style="display:flex;gap:0.5rem;margin:0.5rem 0">
+          <button id="export-csv" class="btn">Export CSV</button>
+          <button id="clear-msgs" class="btn btn-ghost">Clear all</button>
+        </div>
+        <div id="messages-list" style="margin-top:0.6rem"></div>
+      </div>
+
+      <div id="panel-gallery" style="margin-top:0.8rem;display:none">
+        <h3>Gallery management</h3>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+          <input id="img-src" placeholder="images/yourphoto.jpg" style="flex:1;padding:0.5rem;border-radius:8px"/>
+          <input id="img-caption" placeholder="Caption (optional)" style="flex:1;padding:0.5rem;border-radius:8px"/>
+          <button id="add-img" class="btn">Add</button>
+        </div>
+        <div id="gallery-admin-list" style="margin-top:0.8rem"></div>
+        <div style="margin-top:0.6rem">
+          <button id="reset-gallery" class="btn btn-ghost">Reset gallery to defaults</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="admin-script.js" defer></script>
+</body>
+</html>
